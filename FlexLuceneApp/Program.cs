@@ -6,11 +6,22 @@ namespace FlexLuceneApp
 	{
 		public static void Main (string[] args)
 		{
+			try{
 			Console.WriteLine ("Hello FlexLucene!");
 
-//			LuceneTest.TestFlexLuceneRAM (args);
+			Console.WriteLine ("Testing Lucene In Memory:");
+			Console.WriteLine ("=====================================================");
+			LuceneTest.TestFlexLuceneRAM (args);
+			Console.WriteLine ("=====================================================");
 
+			Console.WriteLine ("Testing Lucene using File System:");
+			Console.WriteLine ("=====================================================");
 			LuceneTest.TestFlexLuceneFS (args);
+			Console.WriteLine ("=====================================================");
+			}
+			catch(Exception ex){
+				Console.WriteLine (ex);
+			}
 		}
 	}
 }
