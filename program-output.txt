@@ -1,0 +1,21 @@
+Hello FlexLucene!
+Testing Lucene In Memory:
+=====================================================
+Found 3 hits.
+1. 9900001	Lucene in Action
+2. 9900002	Lucene for Dummies
+3. 9900003	Lucene for Dummies 2
+Label=9900001, Value=1
+Label=9900002, Value=1
+Label=9900003, Value=1
+=====================================================
+Testing Lucene using File System:
+=====================================================
+System.TypeInitializationException: The type initializer for 'FlexLucene.Store.MMapDirectory' threw an exception. ---> java.lang.InternalError: uncaught exception
+  --- End of inner exception stack trace ---
+  at FlexLucene.Store.FSDirectory.Open (Path p, FlexLucene.Store.LockFactory lf) [0x00007] in <filename unknown>:0 
+  at FlexLucene.Store.FSDirectory.Open (Path p) [0x00006] in <filename unknown>:0 
+  at FlexLuceneApp.LuceneTest.TestFlexLuceneFS (System.String[] args) [0x00038] in /home/master/workspace/mono/FlexLuceneApp/FlexLuceneApp/LuceneTest.cs:47 
+  at FlexLuceneApp.MainClass.Main (System.String[] args) [0x00045] in /home/master/workspace/mono/FlexLuceneApp/FlexLuceneApp/Program.cs:19 
+
+
